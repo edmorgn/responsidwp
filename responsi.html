@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mirota Kampus</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Landing Page */
+        #landing-page {
+            background-color: #ff0000; 
+            color: #fff;
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        /* Katalog Produk */
+        #product-catalog,
+        #countdown,
+        #store-location {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .product-item {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            text-align: center;
+            transition: transform 0.3s;
+            border-radius: 8px;
+        }
+
+        .product-item:hover {
+            transform: scale(1.1);
+            border-color: #00b300; 
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            color: #ff0000; 
+        }
+
+        .name {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .price {
+            font-size: 1.5em;
+            color: #00b300; 
+        }
+
+        /* Countdown Timer */
+        #countdown {
+            background-color: #ffcc00; 
+            color: #fff;
+            padding: 20px;
+            font-size: 1.5em;
+        }
+
+        /* Lokasi Toko */
+        #store-location {
+            background-color: #00b300; 
+            color: #fff;
+        }
+
+        footer {
+            background-color: #ffcc00;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-icon {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.5em;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .social-icon:hover {
+            transform: rotate(360deg);
+            color: #00b300; 
+        }
+
+        /* Animasi Fade-in untuk Banner */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .promo-text {
+            animation: fadeIn 2s ease-out;
+        }
+
+        @media screen and (max-width: 768px) {
+            .product-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            #landing-page {
+                padding: 30px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section id="landing-page">
+        <div class="banner">
+            <h1 class="promo-text">Diskon Akhir Tahun! Nikmati Hingga 50% Off!</h1>
+        </div>
+    </section>
+
+    <section id="product-catalog">
+        <h2>Katalog Produk Diskon</h2>
+        <div class="product-gallery">
+
+            <div class="product-item">
+                <img src="c:\xampp\htdocs\edwrdresponsi\sapu.jpg" alt="sapu" width="200">
+                <p class="name">Sapu</p>
+                <p class="price"><span class="original-price">Rp 40.000</span> Rp 20.000</p>
+            </div>
+
+            <div class="product-item">
+                <img src="c:\xampp\htdocs\edwrdresponsi\kursi.jpg" alt="Kursi" width="200">
+                <p class="name">Kursi</p>
+                <p class="price"><span class="original-price">Rp 120.000</span> Rp 60.000</p>
+            </div>
+
+            <div class="product-item">
+                <img src="c:\xampp\htdocs\edwrdresponsi\cermin.jpg" alt="Cermin" width="200">
+                <p class="name">Cermin</p>
+                <p class="price"><span class="original-price">Rp 30.000</span> Rp 15.000</p>
+            </div>
+
+            <div class="product-item">
+                <img src="c:\xampp\htdocs\edwrdresponsi\asbak.jpg" alt="Asbak" width="200">
+                <p class="name">Asbak</p>
+                <p class="price"><span class="original-price">Rp 10.000</span> Rp 5.000</p>
+            </div>
+
+            <div class="product-item">
+                <img src="c:\xampp\htdocs\edwrdresponsi\sabun muka kahf.jpg" alt="sabun muka kahf" width="200">
+                <p class="name">Sabun muka kahf</p>
+                <p class="price"><span class="original-price">Rp 50.000</span> Rp 30.000</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="countdown">
+        <h2>Waktu Tersisa: <span id="timer"></span></h2>
+    </section>
+
+    <section id="store-location">
+        <h2>Lokasi Toko</h2>
+        <div class="map">
+            <!-- Peta atau Gambar Peta -->
+            <img src="c:\xampp\htdocs\edwrdresponsi\lokasi.jpg.png" alt="Peta Lokasi Toko" width="400">
+        </div>
+        <div class="location-details">
+            <p>Alamat - Jalan Menteri Supeno 38 55153 Kota Yogyakarta Daerah Istimewa Yogyakarta · 2,8 km</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-icons">
+            <a href="#" class="social-icon">📱</a>
+            <a href="#" class="social-icon">💻</a>
+            <a href="#" class="social-icon">📍</a>
+        </div>
+    </footer>
+
+    <script>
+        const countdownDate = new Date("January 10, 2025 00:00:00").getTime();
+        const timerElement = document.getElementById("timer");
+
+        const countdown = setInterval(function () {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            timerElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+            if (distance < 0) {
+                clearInterval(countdown);
+                timerElement.innerHTML = "PROMO SELESAI";
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>
